@@ -27,6 +27,12 @@
 		/>
 		<nav class="nav-bar">
 			<a
+				href="/"
+				class:active={$page.route.id === '/'}
+			>
+				Inicio
+			</a>
+			<a
 				href="/sobre-nosotros"
 				class:active={$page.route.id === '/sobre-nosotros'}
 			>
@@ -42,6 +48,18 @@
 	</div>
 	<Collapse open={isNavMenuOpen} class="toggler">
 		<nav class="nav-menu">
+			<a
+				href="/"
+				on:click={() => (isNavMenuOpen = false)}
+			>
+				<div
+					class="nav-item container"
+					class:active={$page.route.id === '/'}
+				>
+					<div>Inicio</div>
+					<Fa icon={faArrowRight} />
+				</div>
+			</a>
 			<a
 				href="/sobre-nosotros"
 				on:click={() => (isNavMenuOpen = false)}
@@ -170,7 +188,7 @@
 				width: 100%;
 				height: 3px;
 				position: absolute;
-				bottom: 0;
+				bottom: -6px;
 				left: 0;
 				background-color: var(--global-color-accent);
 				opacity: 0;
