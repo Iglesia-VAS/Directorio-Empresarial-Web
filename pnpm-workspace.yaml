@@ -1,0 +1,8 @@
+allowBuilds:
+  '@fortawesome/fontawesome-common-types': false
+  '@fortawesome/free-brands-svg-icons': false
+  '@fortawesome/free-regular-svg-icons': false
+  '@fortawesome/free-solid-svg-icons': false
+  '@sveltejs/kit': false
+  esbuild: true
+  svelte-preprocess: false
